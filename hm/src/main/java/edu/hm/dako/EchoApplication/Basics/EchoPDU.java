@@ -75,7 +75,7 @@ public class EchoPDU  implements Serializable
 	{
 		return(serverTime);
 	}
-	
+	// TestKommentar Tobi
 	public boolean getLastRequest() 
 	{
 		return(lastRequest);
