@@ -1,0 +1,14 @@
+2012-10-11 10:55:00,598 DEBUG [TimeCounterThread] edu.hm.dako.EchoApplication.TestAndBenchmarking.TimeCounterThread: TimeCounterThread gestartet
+2012-10-11 10:55:00,598 DEBUG [EchoClient-6] edu.hm.dako.EchoApplication.Basics.SharedClientStatistics: Alle 10 Test-Clients angemeldet
+2012-10-11 10:55:10,698 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 0 nach join, beendet
+2012-10-11 10:55:10,699 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 1 nach join, beendet
+2012-10-11 10:55:10,699 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 2 nach join, beendet
+2012-10-11 10:55:10,699 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 3 nach join, beendet
+2012-10-11 10:55:10,699 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 4 nach join, beendet
+2012-10-11 10:55:10,699 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 5 nach join, beendet
+2012-10-11 10:55:10,700 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 6 nach join, beendet
+2012-10-11 10:55:10,700 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 7 nach join, beendet
+2012-10-11 10:55:10,700 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 8 nach join, beendet
+2012-10-11 10:55:10,700 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.BenchmarkingClient: Client 9 nach join, beendet
+2012-10-11 10:55:10,700 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.TestAndBenchmarking.TimeCounterThread: TimeCounterThread gestoppt
+2012-10-11 10:55:10,743 DEBUG [AWT-EventQueue-0] edu.hm.dako.EchoApplication.Basics.SharedClientStatistics: Datei Benchmarking-EchoApp-Protokolldatei existierte bereits

@@ -1,0 +1,28 @@
+# 
+# Satzaufbau:
+#
+# 01 Messungstyp als String
+# 02 Implementierungstyp als String
+# 03 Anzahl Client-Threads 
+# 04 Durchschnittliche RTT
+# 05 Maximale RTT
+# 06 Minimale RTT 
+# 07 Durchschnittliche Serverbearbeitungszeit 
+# 08 Anzahl geplanter Requests/Responses
+# 09 Anzahl gesendeter Requests
+# 10 Anzahl empfangener Responses
+# 11 Anzahl verlorener Echo Responses 
+# 12 Maximale Heap-Size des Clients 
+# 13 Startzeit der Messung
+# 14 Endezeit der Messung
+#
+Variation der Threadanzahl, Single-threaded UDP, 5, 3, 3, 2, 7, 500, 500, 500, 0, 31, 10.9.2012 9:35:42, 10.9.2012 9:35:42
+Variation der Threadanzahl, Single-threaded TCP, 5, 4, 4, 3, 19, 500, 500, 500, 0, 31, 10.9.2012 9:35:44, 10.9.2012 9:35:45
+Variation der Threadanzahl, Multi-threaded RMI, 5, 1, 1, 0, 10, 500, 500, 500, 0, 26, 10.9.2012 9:35:47, 10.9.2012 9:35:48
+Variation der Threadanzahl, Multi-threaded TCP, 5, 1, 1, 0, 31, 500, 500, 500, 0, 15, 10.9.2012 9:36:43, 10.9.2012 9:36:43
+Variation der Threadanzahl, Multi-threaded UDP, 5, 5, 5, 4, 35, 500, 500, 500, 0, 36, 10.9.2012 9:36:55, 10.9.2012 9:36:56
+Variation der Threadanzahl, Single-threaded UDP, 5, 3, 3, 2, 7, 500, 500, 500, 0, 31, 10.9.2012 9:37:22, 10.9.2012 9:37:22
+Variation der Threadanzahl, Single-threaded TCP, 5, 3, 4, 3, 16, 500, 500, 500, 0, 31, 10.9.2012 9:37:24, 10.9.2012 9:37:25
+Variation der Threadanzahl, Multi-threaded RMI, 5, 1, 1, 0, 7, 500, 500, 500, 0, 26, 10.9.2012 9:37:27, 10.9.2012 9:37:27
+Variation der Threadanzahl, Multi-threaded ReliableUdp, 5, 21, 21, 20, 37, 500, 500, 500, 0, 62, 10.9.2012 10:18:13, 10.9.2012 10:18:19
+Variation der Threadanzahl, Single-threaded TCP, 10, 0, 0, 999, 0, 1000, 0, 0, 0, 0, 11.10.2012 10:55:0, 11.10.2012 10:55:10
