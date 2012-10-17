@@ -45,7 +45,7 @@ public class ReliableUdpMultiThreadedEchoClientThread extends
 	public void initialize(int serverPort, String remoteServerAddress,
 			int numberOfClient, int messageLength, int numberOfMessages,
 			int clientThinkTime, SharedClientStatistics sharedData) {
-		// TODO Das kam von Domi
+		// TODO Das kam von Domi _ und das von Cookie
 	}
 
 	/**
