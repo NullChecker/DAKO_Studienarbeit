@@ -77,16 +77,27 @@ public class TCPSingleThreadedEchoServer {
 			try {
 				// Auf ankommende Verbindungsaufbauwuensche warten
 				// TODO
-
+				Socket incomingConnectionFromClient = serverSocket.accept();
 				
 				// Echo-Request entgegennehmen
 				// TODO
-			//wwww
+				out = new ObjectOutputStream(incomingConnectionFromClient.getOutputStream());
+				in = new ObjectInputStream(incomingConnectionFromClient.getInputStream());
+				
+				// Neue Verbindungen in Verbindungstabelle eintragen
+				Object e = in.readObject();
+				EchoPDU echo = (EchoPDU) e;				
+				
 				// Echo-Response senden
+				out.writeObject(echo);				
 
 				// TODO
 				// Verbindung abbauen
-
+				in.close();
+				out.close();
+				serverSocket.close();				
+			break;
+			
 			} catch (Exception e) {
 				log.error("Socket Exception: " + e);
 			}

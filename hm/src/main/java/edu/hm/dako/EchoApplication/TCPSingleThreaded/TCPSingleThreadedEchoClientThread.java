@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -16,7 +17,7 @@ import edu.hm.dako.EchoApplication.Basics.SharedClientStatistics;
  * Klasse TCPSingleThreadedEchoClientThread
  * 
  * @author Mandl
- *  
+ * 
  */
 public class TCPSingleThreadedEchoClientThread extends AbstractClientThread {
 	private static Log log = LogFactory
@@ -114,36 +115,62 @@ public class TCPSingleThreadedEchoClientThread extends AbstractClientThread {
 		 * Senden von Echo-Nachrichten
 		 */
 
-		for (int i = 0; i < numberOfMessages; i++) {
+		for (int i = 0; i < numberOfMessages; i++) {			
+			
 			// RTT-Startzeit ermitteln
 			rttStartTime = System.nanoTime();
 
 			// Verbindung zum Server aufbauen, solange versuchen, bis Verbindung
-			// steht.
+			// steht.			
 			// Der Server koennte gerade nicht verfuegbar sein und der Verbindungsaufbauversuch 
 			// auf einen Timeout laufen, wenn viele Clients aktiv sind.
-
+			
 			// TODO
+			
+			try {
+				
+				con = new Socket(remoteServerAddress, serverPort);	
+				con.setReuseAddress(true);
+					in = new ObjectInputStream(con.getInputStream());
+					out = new ObjectOutputStream(con.getOutputStream());
+
+		
 
 			// Echo-Nachricht aufbauen
 			// TODO
-
+					EchoPDU pdu = new EchoPDU();
+			
+					//pdu.setClientName(this.getName());
+			
 			// Letzter Request?
 			if (i == numberOfMessages - 1) {
-				// pdu.setLastRequest(true);
+				pdu.setLastRequest(true);
 			}
 
-			// Senden der Nachricht an den Server
-
+			// Senden der Nachricht an den Server			
 			// TODO
+			out.writeObject(pdu);
 			// Antwort entgegennehmen
 			// TODO
+			in.readObject();
 			// Response-Zaehler erhoehen
-
-			// Transportverbindung abbauen
-
 			// TODO
-
+			sharedData.incrSentMsgCounter(numberOfClient);
+			// Transportverbindung abbauen
+			// TODO
+			in.close();
+			out.close();
+			
+			} catch (UnknownHostException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			// RTT berechnen
 			rtt = System.nanoTime() - rttStartTime;
 
@@ -161,6 +188,6 @@ public class TCPSingleThreadedEchoClientThread extends AbstractClientThread {
 		}
 
 		// Statistikdaten des Clients ausgeben
-		// sharedData.printClientStatistic(numberOfClient);
+		sharedData.printClientStatistic(numberOfClient);
 	}
 }
